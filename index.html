@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovateX Community Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🚀 Community Event Portal</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#events">Events</a>
+            <a href="#register">Register</a>
+            <a href="#contact">Location</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Empowering Communities Through Innovation</h2>
+
+        <p>
+            Discover Technology, Creativity, Networking and Sustainability
+            Events Designed for Future Leaders.
+        </p>
+
+        <button onclick="scrollToEvents()">
+            Explore Events
+        </button>
+    </section>
+
+    <section id="events">
+
+        <h2 class="title">Featured Events</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🚀 Tech Innovation Summit</h3>
+                <p>Explore future technologies and digital transformation.</p>
+                <button onclick="registerEvent('Tech Innovation Summit')">
+                    Register
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>🤖 AI & Robotics Expo</h3>
+                <p>Experience cutting-edge AI and robotics innovations.</p>
+                <button onclick="registerEvent('AI & Robotics Expo')">
+                    Register
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>🎨 Creative Design Workshop</h3>
+                <p>Master UI/UX and graphic design fundamentals.</p>
+                <button onclick="registerEvent('Creative Design Workshop')">
+                    Register
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>🌱 Green Earth Campaign</h3>
+                <p>Promote sustainability and environmental awareness.</p>
+                <button onclick="registerEvent('Green Earth Campaign')">
+                    Register
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>💼 Startup Networking Meet</h3>
+                <p>Connect with entrepreneurs and startup founders.</p>
+                <button onclick="registerEvent('Startup Networking Meet')">
+                    Register
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>📸 Photography Challenge</h3>
+                <p>Capture creativity and showcase your photography skills.</p>
+                <button onclick="registerEvent('Photography Challenge')">
+                    Register
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="register">
+
+        <h2 class="title">Event Registration</h2>
+
+        <form id="registrationForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter Full Name"
+                required>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter Email Address"
+                required>
+
+            <select id="eventType" required>
+
+                <option value="">Select Event</option>
+                <option>Tech Innovation Summit</option>
+                <option>AI & Robotics Expo</option>
+                <option>Creative Design Workshop</option>
+                <option>Green Earth Campaign</option>
+                <option>Startup Networking Meet</option>
+                <option>Photography Challenge</option>
+
+            </select>
+
+            <textarea
+                id="message"
+                rows="5"
+                placeholder="Enter Message"
+                onkeyup="countChars()"></textarea>
+
+            <p>
+                Characters:
+                <span id="count">0</span>/200
+            </p>
+
+            <button type="submit">
+                Submit Registration
+            </button>
+
+        </form>
+
+        <p id="successMessage"></p>
+
+    </section>
+
+    <section id="contact">
+
+        <h2 class="title">Find Your Location</h2>
+
+        <button onclick="getLocation()">
+            📍 Get Current Location
+        </button>
+
+        <p id="location"></p>
+
+    </section>
+
+    <footer>
+        <p>© 2026 InnovateX Community Platform | All Rights Reserved</p>
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
